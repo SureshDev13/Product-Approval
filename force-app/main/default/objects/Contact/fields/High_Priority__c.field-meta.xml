@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Priority__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(  Account.Priority__c  ,&quot;Low&quot;), 
+        &quot; Account.Priority__c . Low&quot;,
+     IF( ISPICKVAL( Account.Priority__c ,&quot;Medium&quot;),
+        &quot; Account.Priority__c . Medium&quot;,
+        &quot;Account.Priority__c . High&quot;
+   )
+)</formula>
+    <label>High Priority</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

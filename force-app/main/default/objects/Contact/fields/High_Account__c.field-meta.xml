@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Account__c</fullName>
+    <formula>ISPICKVAL( Account.Priority__c , &quot;High&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>High Account</label>
+    <type>Checkbox</type>
+</CustomField>

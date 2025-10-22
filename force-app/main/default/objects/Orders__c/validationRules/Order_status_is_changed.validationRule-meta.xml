@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_status_is_changed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED( Status__c ), 
+    NOT(
+        OR(
+            AND(
+                TEXT(PRIORVALUE(Status__c)) = &quot;Placed&quot;,
+                OR(
+                    TEXT(Status__c) = &quot;In-Transit&quot;,
+                    TEXT(Status__c) = &quot;Delivered&quot;
+                )
+            ),
+            AND(
+                TEXT(PRIORVALUE(Status__c)) = &quot;In-Transit&quot;,
+                TEXT(Status__c) = &quot;Delivered&quot;
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Status cannot be changed</errorMessage>
+</ValidationRule>

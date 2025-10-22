@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changing_Account_Priority</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Priority__c)&amp;&amp; ISPICKVAL(PRIORVALUE(Priority__c), &quot;High&quot;) &amp;&amp; ISPICKVAL(Priority__c, &quot;Low&quot;)</errorConditionFormula>
+    <errorMessage>Account priority cannot be changed</errorMessage>
+</ValidationRule>

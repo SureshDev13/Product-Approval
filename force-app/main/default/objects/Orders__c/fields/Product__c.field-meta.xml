@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Product</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Product__c.Available_Units__c</field>
+            <operation>greaterOrEqual</operation>
+            <valueField>$Source.Ordered_Units__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Product__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Ready For Sale</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Product__c</referenceTo>
+    <relationshipLabel>Orders</relationshipLabel>
+    <relationshipName>Orders</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

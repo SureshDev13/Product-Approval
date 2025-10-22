@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>new</fullName>
+    <columns>NAME</columns>
+    <columns>Automatic_Type__c</columns>
+    <columns>Available_Units__c</columns>
+    <columns>Brand_Name__c</columns>
+    <columns>Capacity_in_Kgs__c</columns>
+    <columns>Capacity_in_Tons__c</columns>
+    <columns>Model__c</columns>
+    <columns>Price__c</columns>
+    <columns>Screen_Size__c</columns>
+    <columns>Smart_TV__c</columns>
+    <columns>Status__c</columns>
+    <columns>Type__c</columns>
+    <columns>Warranty_Period_in_years__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>All Records</label>
+</ListView>
